@@ -30,5 +30,9 @@ app.post('/usarios:id',(req,res)=>{
     res.send('dentro de indentificar usuario')
 })
 
+app.post('/usarios',(req,res)=>{
+    res.send('dentro de la carpeta usuarios')
+})
+
 app.listen(process.env.PORT)
 console.log(`servidor iniciado en el puerto ${process.env.PORT}`)
