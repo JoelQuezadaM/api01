@@ -1,5 +1,8 @@
 import express from "express";
 import { pool } from "./db.js";
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const app=express();
  app.use(express.json())
@@ -27,5 +30,5 @@ app.post('/usarios:id',(req,res)=>{
     res.send('dentro de indentificar usuario')
 })
 
-app.listen(2000)
-console.log('servidor iniciado en el puerto 2000')
+app.listen(process.env.PORT)
+console.log(`servidor iniciado en el puerto ${process.env.PORT}`)
